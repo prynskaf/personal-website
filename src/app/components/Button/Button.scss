@@ -1,0 +1,30 @@
+
+.button-wrapper {
+    display: inline-block;
+    padding: 0.5rem 0;
+
+
+  
+    .button-btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: rgb(100, 255, 218);
+      // background-color: rgba(10, 25, 47, 0.85);
+      background-color: inherit;
+      border: 2px solid rgb(100, 255, 218);
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden; 
+      transition: all 0.3s ease; 
+
+      &:hover {
+        border: 2px solid rgb(0, 128, 128);
+      }
+    }
+  
+  }
+  
+

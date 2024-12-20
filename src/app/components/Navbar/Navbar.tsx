@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.scss';
 import Link from 'next/link';
 import { NavTypes } from '@/app/utils/navlinks/navlinks';
@@ -13,6 +13,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ navlinks }) => {
     const [nav] = navlinks;
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -22,8 +23,24 @@ const Navbar: React.FC<NavbarProps> = ({ navlinks }) => {
         setMenuOpen(false);
     };
 
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <header className="Navbar-wrapper">
+        <header className={`Navbar-wrapper ${isScrolled ? 'scrolled' : ''}`}>
             <Link href="/"  className="logo-box">
                 <div className="logo-box  Navbar-logo" >
                     {nav.logo}

@@ -10,5 +10,7 @@
 
 
 body {
-  background-color: rgba(10, 25, 47, 0.85);
+  background-color: rgba(4, 15, 32, 0.85);
+  /* background-color: rgba(10, 25, 47, 0.85); */
+  height: 100vh;
 }

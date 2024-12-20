@@ -1,0 +1,189 @@
+
+:root {
+    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    
+}
+
+.Navbar-wrapper {
+    background-color: rgba(10, 25, 47, 0.85);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -10px 0px 30px -15px rgb(0 0 0 / 40%);
+
+    .Navbar-logo {
+        transform: rotate(10deg);
+        border-radius: 5px;
+        color: rgb(100, 255, 218);
+        font-family: var(--font-mono);
+        font-size: 1rem;
+        font-weight: bolder;
+        // background-color: rgba(10, 25, 47, 0.85);
+        background-color: inherit;
+        padding: 0.5rem 1rem;
+        border: 2px solid rgb(100, 255, 218);
+        transition: all 0.3s ease;
+        &:hover {
+            border: 2px solid rgb(0, 128, 128);
+            transform: rotate(0deg);
+        }
+    }
+
+    .Navbar-items {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .Navbar-links {
+            display: flex;
+            gap: 20px;
+          
+            .links-col {
+                gap: 7px;
+                display: flex;
+                align-items: center;
+            }
+
+
+            .nav-ids-styles {
+                color: rgb(100, 255, 218);
+                font-family: var(--font-mono);
+            }
+
+            .nav-title-styles {
+                color: #e6f1ff;
+            }
+
+            .nav-ids-styles,
+            .nav-title-styles {
+                transition: all 0.3s ease;
+                &:hover {
+                    color: rgb(100, 255, 218);
+                }
+            }
+        }
+    }
+
+    .Hamburger-menu {
+        display: none;
+
+        .hamburger-icon {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 24px;
+            width: 30px;
+            z-index: 1100;
+
+            .bar {
+                width: 100%;
+                height: 3px;
+                background-color: rgb(100, 255, 218);
+                border-radius: 2px;
+                transition: all 0.3s ease;
+            }
+
+            &.open .bar:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            &.open .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            &.open .bar:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 250px;
+            height: 100%;
+            background:#112240;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            transition: right 0.3s ease;
+            box-shadow: -10px 0px 30px -15px rgb(0 0 0 / 40%);
+
+            &.open {
+                right: 0;
+            }
+
+            .links-col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-links {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .nav-ids-styles {
+                    color: rgb(100, 255, 218);
+                    font-family: var(--font-mono);
+                }
+    
+                .nav-title-styles {
+                    color: #e6f1ff;
+                    font-weight: 400;
+                }
+    
+                .nav-ids-styles,
+                .nav-title-styles {
+                    transition: all 0.3s ease;
+                    &:hover {
+                        color: rgb(100, 255, 218);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .Navbar-items {
+            display: none;
+        }
+
+        .Hamburger-menu {
+            display: flex;
+        }
+
+        .Navbar-logo {
+            transform: rotate(10deg);
+           
+           
+            font-size: 0.85rem;
+            font-weight: bolder;
+            padding: 0.3rem 0.80rem;
+            border: 2px solid rgb(100, 255, 218);
+            &:hover {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    
+}
+
+
+
+
+

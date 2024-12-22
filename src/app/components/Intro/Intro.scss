@@ -1,0 +1,121 @@
+:root {
+    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    --lightest-slate: #ccd6f6;
+    --slate: #8892b0;
+}
+
+
+.intro-wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 20px 20PX;
+    width: 100%;
+    height: 100vh;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    // background-color: yellow;
+    margin-top: -45PX;
+
+
+    // about-headline styles
+    .intro-headline {
+        p {
+            color: rgb(100, 255, 218);
+            font-size: 1.2rem;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .name {
+            color: var(--lightest-slate);
+            font-size: 3rem;
+            font-weight: bolder;
+        }
+
+        .description {
+            color: var(--slate);
+            font-size: 3rem;
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+    }
+
+    .intro-subHeadline {
+        p {
+            color: var(--slate);
+            font-weight: 600;
+            margin-bottom: 10px;
+            max-width: 500px;
+    
+            .link-style {
+                color: rgb(100, 255, 218);
+                position: relative; 
+                text-decoration: none; 
+                transition: color 0.3s ease;
+    
+                &:hover {
+                    color: rgb(80, 230, 200); 
+                }
+    
+                &::after {
+                    content: ''; 
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    width: 0%; 
+                    height: .10px; 
+                    background-color: rgb(100, 255, 218); 
+                    transition: width 0.3s ease;
+                }
+    
+                &:hover::after {
+                    width: 100%; 
+                    left: 0; 
+                }
+            }
+        }
+    }
+
+    .button-text {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+// Responsive styles for small screens
+@media screen and (max-width: 768px) {
+    .intro-wrapper {
+        padding: 50px 20px;
+
+        .intro-headline {
+            p {
+                font-size: 1rem; 
+            }
+
+            .name {
+                font-size: 2rem; 
+            }
+
+            .description {
+                font-size: 1.8rem;
+            }
+        }
+
+        .intro-subHeadline {
+            p {
+                font-size: 0.9rem; 
+                max-width: 100%; 
+            }
+        }
+
+        .button-text {
+            font-size: 0.9rem; 
+            gap: 8px; 
+        }
+    }
+}

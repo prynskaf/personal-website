@@ -1,0 +1,185 @@
+:root {
+    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    --slate: #8892b0;
+  }
+
+ 
+
+.work-section {
+    max-width: 700px;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 100px 0px;
+    // background-color: red;
+  
+    .work-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--lightest-slate);
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+  
+      .work-number {
+        color: #64ffda;
+        font-size: 1.5rem;
+        margin-right: 10px;
+        font-family: var(--font-mono);
+      }
+    }
+  
+    .work-content {
+      display: flex;
+      gap: 40px;
+  
+      .companies-list {
+        min-width: 200px;
+        border-left: 2px solid #233554;
+        height: 100%;
+  
+        .company-item {
+          padding: 10px 20px;
+          color: #8892b0;
+          cursor: pointer;
+          transition: all 0.25s ease;
+          position: relative;
+  
+          &:hover {
+            color: #64ffda;
+            background-color: #112240;
+          }
+  
+          &.active {
+            color: #64ffda;
+            background-color: #112240;
+            
+            &::before {
+              content: '';
+              position: absolute;
+              left: -2px;
+              top: 0;
+              width: 2px;
+              height: 100%;
+              background-color: #64ffda;
+            }
+          }
+        }
+      }
+  
+      .experience-details {
+        .experience-item {
+          animation: fadeIn 0.5s ease;
+
+
+  
+          .role {
+            color: #ccd6f6;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+
+            .link-style {
+                position: relative; 
+                text-decoration: none; 
+                transition: color 0.3s ease;
+    
+                &:hover {
+                    color: rgb(80, 230, 200); 
+                }
+    
+                &::after {
+                    content: ''; 
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    width: 0%; 
+                    height: .10px; 
+                    background-color: rgb(100, 255, 218); 
+                    transition: width 0.3s ease;
+                }
+    
+                &:hover::after {
+                    width: 100%; 
+                    left: 0; 
+                }
+            }
+          }
+  
+          .period {
+            color: #8892b0;
+            font-family: var(--font-mono);
+            margin-bottom: 25px;
+          }
+  
+          .achievements {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+  
+            li {
+              position: relative;
+              padding-left: 30px;
+              margin-bottom: 10px;
+            //   color: #8892b0;
+              line-height: 1.5;
+              color: var(--slate);
+          font-weight: 600;
+  
+              .bullet {
+                position: absolute;
+                left: 0;
+                color: #64ffda;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .work-section {
+      padding: 50px 20px;
+      max-width: 100%;
+  
+      .work-content {
+        flex-direction: column;
+  
+        .companies-list {
+          border-left: none;
+          border-bottom: 2px solid #233554;
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          display: flex;
+          overflow-x: auto;
+          
+          .company-item {
+            white-space: nowrap;
+            
+            &.active::before {
+              top: auto;
+              bottom: -2px;
+              left: 0;
+              width: 100%;
+              height: 2px;
+            }
+          }
+        }
+      }
+
+        .work-title {
+            font-size: 2rem;
+        }
+    }
+  }

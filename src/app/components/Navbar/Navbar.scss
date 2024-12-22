@@ -5,24 +5,18 @@
 }
 
 .Navbar-wrapper {
-    // background-color: rgba(10, 25, 47, 0.85);
-    // background-color: rgba(4, 15, 32, 0.85);
-    // backdrop-filter: blur(10px);
     padding: 20px;
-    position: fixed;
-    top: 0;
+    // position: sticky;
+    // top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: -10px 0px 30px -15px rgb(0 0 0 / 40%);
     z-index: 1000;
-
-
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
-    // Default styles
     background-color: transparent;
     backdrop-filter: none;
+    // background-color: RED;
 
     // Scrolled state
     &.scrolled {
@@ -39,7 +33,6 @@
         font-family: var(--font-mono);
         font-size: 1rem;
         font-weight: bolder;
-        // background-color: rgba(10, 25, 47, 0.85);
         background-color: inherit;
         padding: 0.5rem 1rem;
         border: 2px solid rgb(100, 255, 218);
@@ -127,8 +120,8 @@
             width: 250px;
             height: 100%;
             background:#112240;
-        //    background-color: rgba(10, 25, 47, 0.85);
-        //    backdrop-filter: blur(5px);
+           background-color: rgba(10, 25, 47, 0.85);
+           backdrop-filter: blur(5px);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -137,7 +130,7 @@
             padding: 20px;
             transition: right 0.3s ease;
             box-shadow: -10px 0px 30px -15px rgb(0 0 0 / 40%);
-           //index:10000;
+           Z-index:1000;
     
 
             &.open {

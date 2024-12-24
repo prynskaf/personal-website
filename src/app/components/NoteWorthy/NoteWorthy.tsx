@@ -20,7 +20,7 @@ export default function NoteWorthy() {
         <section className={styles.noteworthy}>
             <div className={styles.noteworthy__header}>
                 <h2>Other Noteworthy Projects</h2>
-                <Link className='link-style' href="/archive">view the archive</Link>
+                {/* <Link className='link-style' href="/archive">view the archive</Link> */}
             </div>
 
             <div className={styles.noteworthy__grid}>

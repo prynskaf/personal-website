@@ -2,35 +2,10 @@
 
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import styles from './Archive.module.scss';
+import { projects } from '@/app/utils/archieveData/archiveData';
 
-interface Project {
-  year: string;
-  title: string;
-  madeAt: string;
-  builtWith: string[];
-  links: {
-    github?: string;
-    external?: string;
-  };
-}
 
-const projects: Project[] = [
-  {
-    year: "2022",
-    title: "Harvard Business School Design System",
-    madeAt: "Upstatement",
-    builtWith: ["Storybook", "React", "TypeScript"],
-    links: { external: "#" }
-  },
-  {
-    year: "2022",
-    title: "Threadable",
-    madeAt: "Upstatement",
-    builtWith: ["React Native", "Ruby on Rails", "Firebase"],
-    links: { external: "#", github: "#" }
-  }
-  // Add more projects...
-];
+
 
 export default function Archive() {
   return (

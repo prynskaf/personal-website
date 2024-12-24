@@ -10,66 +10,26 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: 1,
-        title: "Integrating Algolia Search with WordPress Multisite",
-        description: "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
-        tech: ["Algolia", "WordPress", "PHP"],
-        githubLink: "#",
-        externalLink: "#"
+        title: "Integrating Ecommerce Filtering App",
+        description: "This project allows users to explore a variety of products, filter items based on product names, and easily find the desired results.",
+        tech: ["React", "Vanilla CSS"],
+        githubLink: "https://github.com/prynskaf/ecommerce-filtering",
+        externalLink: "https://magnificent-banoffee-e2bd6b.netlify.app"
     },
     {
         id: 2,
-        title: "Time to Have More Fun",
-        description: "A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS",
-        tech: ["Next.js", "Tailwind CSS", "Firebase"],
-        githubLink: "#",
-        externalLink: "#"
+        title: "Car Rental App",
+        description: "Built on the powerful Next.js framework and styled with the elegance of Tailwind CSS, this application brings car renting to a whole new level",
+        tech: ["Next.js", "Tailwind CSS", "TypeScript"],
+        githubLink: "https://github.com/prynskaf/car-rentals",
+        externalLink: "car-rentals-pi.vercel.app/"
     },
     {
         id: 3,
-        title: "Time to Have More Fun",
-        description: "A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS",
-        tech: ["Next.js", "Tailwind CSS", "Firebase"],
-        githubLink: "#",
-        externalLink: "#"
-    },
-    {
-        id: 4,
-        title: "Time to Have More Fun",
-        description: "A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS",
-        tech: ["Next.js", "Tailwind CSS", "Firebase"],
-        githubLink: "#",
-        externalLink: "#"
-    },
-    {
-        id: 5,
-        title: "Integrating Algolia Search with WordPress Multisite",
-        description: "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
-        tech: ["Algolia", "WordPress", "PHP"],
-        githubLink: "#",
-        externalLink: "#"
-    },
-    {
-        id: 6,
-        title: "Time to Have More Fun",
-        description: "A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS",
-        tech: ["Next.js", "Tailwind CSS", "Firebase"],
-        githubLink: "#",
-        externalLink: "#"
-    },
-    {
-        id: 7,
-        title: "Time to Have More Fun",
-        description: "A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS",
-        tech: ["Next.js", "Tailwind CSS", "Firebase"],
-        githubLink: "#",
-        externalLink: "#"
-    },
-    {
-        id: 8,
-        title: "Time to Have More Fun",
-        description: "A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS",
-        tech: ["Next.js", "Tailwind CSS", "Firebase"],
-        githubLink: "#",
-        externalLink: "#"
+        title: "Bed'N Blues HOTEL",
+        description: "This static website offers a snapshot of inviting rooms, transparent pricing, and streamlined booking process connected through the Booking.com API.",
+        tech: ["Vanilla JS", "Vanilla CSS"],
+        githubLink: "https://github.com/prynskaf/bednblues",
+        externalLink: "https://sad-banach-0a9477.netlify.app/"
     },
 ];

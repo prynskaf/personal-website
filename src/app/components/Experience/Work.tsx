@@ -14,7 +14,7 @@ const Experience: React.FC = () => {
     return (
         <section id='Experience' className="work-section">
             <h2 className="work-title">
-                <span className="work-number">02.</span> Where I've Worked
+                <span className="work-number">02.</span> Where I&apos;ve Worked
             </h2>
 
             <div className="work-content">

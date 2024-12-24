@@ -1,1 +1,13 @@
- 
+// .home-wrapper {
+//     // Optional background or layout styles
+//   }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .section {
+    margin-bottom: 3rem; // Adjust spacing between sections
+  }
+  

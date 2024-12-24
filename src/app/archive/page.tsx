@@ -1,15 +1,9 @@
 'use client';
 
 import React from 'react';
+import Archive from '../components/Archive/Archive';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import Intro from './components/Intro/Intro';
-import About from './components/About/About';
-import Experience from './components/Experience/Work';
-import Project from './components/Project/Project';
-import NoteWorthy from './components/NoteWorthy/NoteWorthy';
-import Contact from './components/Contact/Contact';import './styles/home.scss';
-
 
 const fadeInVariant = {
   hidden: { opacity: 0, y: 50 },
@@ -39,29 +33,14 @@ const Section = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-const Home = () => {
+const ArchivePage = () => {
   return (
-    <main className="home-wrapper">
+    <div>
       <Section>
-        <Intro />
+        <Archive />
       </Section>
-      <Section>
-        <About />
-      </Section>
-      <Section>
-        <Experience />
-      </Section>
-      <Section>
-        <Project />
-      </Section>
-      <Section>
-        <NoteWorthy />
-      </Section>
-      <Section>
-        <Contact />
-      </Section>
-    </main>
+    </div>
   );
 };
 
-export default Home;
+export default ArchivePage;

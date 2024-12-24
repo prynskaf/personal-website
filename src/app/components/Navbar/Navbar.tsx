@@ -3,14 +3,14 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.scss';
 import Link from 'next/link';
-import { NavTypes } from '@/app/utils/navlinks/navlinks';
+import { navlinks } from '@/app/utils/navlinks/navlinks';
 import Resume from '../Resume/Resume';
 
-interface NavbarProps {
-    navlinks: NavTypes[];
-}
+// interface NavbarProps {
+//     navlinks: NavTypes[];
+// }
 
-const Navbar: React.FC<NavbarProps> = ({ navlinks }) => {
+const Navbar: React.FC = () => {
     const [nav] = navlinks;
     const [menuOpen, setMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);

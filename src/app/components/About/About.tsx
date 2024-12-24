@@ -24,7 +24,7 @@ const About = () => {
           <p>
             Over the years, I’ve had the opportunity to work on dynamic projects
              across industries, from designing property management platforms to developing 
-             user-friendly <Link className='link-style' href='https://www.afitpilot.com/'> training applications</Link>. My approach blends technical expertise with a 
+             user-friendly <Link className='link-style' href='https://www.afitpilot.com/' target="_blank" rel="noopener noreferrer"> training applications</Link>. My approach blends technical expertise with a 
              commitment to creating accessible and performance-driven solutions.
           </p>
           <p>

@@ -22,7 +22,7 @@ export const projects: Project[] = [
         description: "Built on the powerful Next.js framework and styled with the elegance of Tailwind CSS, this application brings car renting to a whole new level",
         tech: ["Next.js", "Tailwind CSS", "TypeScript"],
         githubLink: "https://github.com/prynskaf/car-rentals",
-        externalLink: "car-rentals-pi.vercel.app/"
+        externalLink: "https://car-rentals-pi.vercel.app/"
     },
     {
         id: 3,

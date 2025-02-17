@@ -8,6 +8,7 @@ import Experience from './components/Experience/Work';
 import Project from './components/Project/Project';
 import NoteWorthy from './components/NoteWorthy/NoteWorthy';
 import Contact from './components/Contact/Contact';import './styles/home.scss';
+import GoogleAnalytics from './lib/googleAnalytics';
 
 
 const fadeInVariant = {
@@ -41,6 +42,7 @@ const Section = ({ children }: { children: React.ReactNode }) => {
 const Home = () => {
   return (
     <main className="home-wrapper">
+      <GoogleAnalytics />
       <Section>
         <Intro />
       </Section>

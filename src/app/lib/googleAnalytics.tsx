@@ -1,10 +1,10 @@
-"use client"
-import Script from 'next/script';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+"use client";
 
+import Script from "next/script";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
-const GA_TRACKING_ID = 'G-Z4L11XRBMS';
+const GA_TRACKING_ID = "G-Z4L11XRBMS";
 
 declare global {
   interface Window {
@@ -19,34 +19,33 @@ declare global {
   }
 }
 
-
-// Pageview tracking
+// Function to track page views
 export const pageview = (url: string) => {
-  window.gtag('config', GA_TRACKING_ID, {
-    page_path: url,
-  });
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("config", GA_TRACKING_ID, {
+      page_path: url,
+    });
+  }
 };
 
-// Main Analytics Component
+// Google Analytics Component
 const GoogleAnalytics = () => {
-  const router = useRouter();
+  const pathname = usePathname(); 
 
   useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      pageview(url);
-    };
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router.events]);
+    if (pathname) {
+      pageview(pathname);
+    }
+  }, [pathname]); 
 
   return (
     <>
+      {/* Load Google Analytics script */}
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
       />
+      {/* Initialize Google Analytics */}
       <Script
         id="google-analytics"
         strategy="afterInteractive"
@@ -55,7 +54,9 @@ const GoogleAnalytics = () => {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}');
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
           `,
         }}
       />

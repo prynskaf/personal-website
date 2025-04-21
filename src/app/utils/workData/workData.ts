@@ -27,7 +27,7 @@ export const workData: WorkExperience[] = [
         id: 2,
       company: "Clayton Dev",
       role: "Full Stack Developer Intern",
-      period: "January - March 2024",
+      period: "January 2024 - March 2024",
       link: "https://www.walterclayton.com/",
       achievements: [
         "Enhanced AfitPilot blog's performance by optimizing the frontend and backend with the WordPress REST API, reducing load time by 40%, which significantly enhanced the user experience and retention",
@@ -36,7 +36,18 @@ export const workData: WorkExperience[] = [
       ]
     },
     {
-        id: 3,
+      id: 3,
+    company: "Belgium Call Center",
+    role: "Full Stack Developer",
+    period: "September 2024 - March 2025",
+    link: "http://www.belgiecallenter.com/",
+    achievements: [
+      "Contributed to the Innovation team of a leading Belgian call center by spearheading the development of the completeclient-side interface for an AI-enhanced email support application. This solution streamlined email handling by analyzing content, recommending agent actions, and proposing refined responses, demonstrably reducing processing time and improving response quality",
+      "My focus was on the industrialization and successful deployment of this application, which has since been adopted by fourother clients. Collaborated with an AI expert and a system expert on the team."
+    ]
+  },
+    {
+        id: 4,
       company: "PA Group",
       role: "Software Developer (Internship)",
       period: "May - December 2024",
@@ -48,15 +59,14 @@ export const workData: WorkExperience[] = [
       ]
     },
     {
-        id: 4,
+        id: 5,
       company: "PA  Group",
       role: "Software Developer (Contract)",
       period: "December 2024 - Present",
       link: "http://www.proadvisor-group.com/",
       achievements: [
-        "Continuing to contribute to the global real estate platform by implementing advanced frontend optimizations and maintaining a seamless API integration workflow",
-        "Focusing on scalable architecture and collaborating with cross-functional teams to deliver high-quality, user-friendly features",
-        "Supporting ongoing performance improvements to ensure fast and reliable application performance for end users"
+        "Promoted from intern to freelance developer based on strong performance and initiative.",
+         "Contributed to ongoing platform performance enhancements and new feature rollouts",
       ]
     }
   ];

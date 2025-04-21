@@ -50,7 +50,7 @@ export const workData: WorkExperience[] = [
         id: 4,
       company: "PA Group",
       role: "Software Developer (Internship)",
-      period: "May - December 2024",
+      period: "May 2024 - December 2024",
       link: "http://www.proadvisor-group.com/",
       achievements: [
         "Collaborated with the frontend team to develop a responsive real estate website using Next.js and TypeScript, ensuring seamless UI/UX implementation from Figma designs",

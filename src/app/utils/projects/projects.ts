@@ -1,4 +1,15 @@
 export const projects = [
+
+    {
+      title: 'AlwaysApply',
+      type: 'Featured Project',
+      description: 'AlwaysApply is a modern web-based job portal that helps job seekers find and apply for jobs, and enables employers to post and manage job listings. The platform offers advanced search and filtering options, personalized job recommendations, and secure authentication for both job seekers and employers. Employers can easily track applications, manage job postings, and communicate with candidates, while job seekers benefit from a user-friendly interface, resume uploads, and real-time notifications.',
+      technologies: ['Next.js', 'Firebase (Firestore, Auth)', 'Scss', 'TypeScript', 'Cloudinary (image uploads)', "Redux Toolkit"],
+      image: '/alwaysApply.png',
+      code: "https://github.com/prynskaf/job-portal.git",
+      webkitURL: "https://job-portal-eta-taupe.vercel.app/"
+    },
+
     {
       title: 'Shopper',
       type: 'Featured Project',

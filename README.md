@@ -1,4 +1,6 @@
-# Building a personal portfolio website  its still in development
+# Personal Portfolio Website
+
+_This project is still in development._
 
 ## Features
 
@@ -9,29 +11,55 @@
 
 ## Technologies Used
 
-- HTML5, CSS3, JavaScript
-- Next.js for dynamic components
+- Next.js, React, TypeScript
+- Firebase, MongoDB, Express.js, Sanity, Stripe, Clerk, Redux Toolkit, Zustand
+- SCSS, Cloudinary
 - Deployed using Vercel
+
+## Projects
+
+### [AlwaysApply](https://job-portal-eta-taupe.vercel.app/)
+A modern web-based job portal for job seekers and employers.  
+**Tech:** Next.js, Firebase (Firestore, Auth), SCSS, TypeScript, Cloudinary, Redux Toolkit  
+[Source Code](https://github.com/prynskaf/job-portal.git)
+
+---
+
+### [Shopper](https://shopper-eta-five.vercel.app/)
+A comprehensive e-commerce application with rich text editing, code highlighting, and real-time updates.  
+**Tech:** Next.js, TypeScript, Sanity, Clerk, Stripe  
+[Source Code](https://github.com/prynskaf/shoppr)
+
+---
+
+### [Code Notebook](https://notebook-two-zeta.vercel.app/)
+A note-taking app with rich text editing, code highlighting, and MongoDB integration.  
+**Tech:** Next.js, TypeScript, MongoDB, Express.js  
+[Source Code](https://github.com/prynskaf/notebook)
+
+---
+
+### [SocialConnect](https://social-app-silk-nine.vercel.app)
+A social app for posting updates and comments, with authentication and community features.  
+**Tech:** React, MongoDB, Express, TypeScript  
+[Source Code](https://github.com/prynskaf/SocialApp)
 
 ## How to Run Locally
 
 1. Clone the repository:
     ```bash
     git clone https://github.com/yourusername/personal-web.git
-    ```
-2. Navigate to the project directory:
-    ```bash
     cd personal-web
     ```
-3. Install dependencies:
+2. Install dependencies:
     ```bash
     npm install
     ```
-4. Start the development server:
+3. Start the development server:
     ```bash
-    npm start
+    npm run dev
     ```
-5. Open your browser and go to `http://localhost:3000`.
+4. Open your browser and go to `http://localhost:3000`.
 
 ## Future Enhancements
 

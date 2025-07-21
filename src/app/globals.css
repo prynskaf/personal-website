@@ -24,7 +24,7 @@ html {
 
 body {
   background-color: #0A192F;
-  height: 100vh;
+ min-height: 100vh; /* ✅ Use min-height instead */
   width: 100%;
 }
 

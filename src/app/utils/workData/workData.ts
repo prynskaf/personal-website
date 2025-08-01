@@ -65,7 +65,7 @@ export const workData: WorkExperience[] = [
       period: "December 2024 - Present",
       link: "http://www.proadvisor-group.com/",
       achievements: [
-        "Promoted from intern to freelance developer based on strong performance and initiative.",
+        "Following successful completion of the internship, promoted to freelance developer role. Awaiting next project phase while actively seeking new opportunities to grow professionally and contribute to diverse work environments. ",
          "Contributed to ongoing platform performance enhancements and new feature rollouts",
       ]
     }

@@ -14,33 +14,70 @@ const Intro = () => {
     }
   };
 
-  return (
-    <section className="intro-wrapper">
-      <div className="intro-headline">
-        <p>Hi, my name is</p>
-        <h1 className="name">Prince Kyei.</h1>
-        <h1 className="description">I build things for the web.</h1>
-      </div>
+//   return (
+//     <section className="intro-wrapper">
+//       <div className="intro-headline">
+//         <p>Hi, my name is</p>
+//         <h1 className="name">Prince Kyei.</h1>
+//         <h1 className="description">I build things for the web.</h1>
+//       </div>
 
-      <div className="intro-subHeadline">
-        <p>
-          I&apos;m a software engineer specializing in creating exceptional digital experiences. Currently, I&apos;m
-          focused on building accessible, human-centered products at {''}
-          <Link className="link-style" href="https://proadvisor-group.com/" target="_blank" rel="noopener noreferrer">
-            Pro Advisor Group.
-          </Link>
-        </p>
-      </div>
-      <div className="intro-btn">
-        <Button onClick={handleScrollToAbout}>
-          <div className="button-text">
-            <span>Read More </span>
-            <FiCornerRightDown />
-          </div>
-        </Button>
-      </div>
-    </section>
-  );
-};
+//       <div className="intro-subHeadline">
+//         <p>
+//           I&apos;m a software engineer specializing in creating exceptional digital experiences. Currently, I&apos;m
+//           focused on building accessible, human-centered products at {''}
+//           <Link className="link-style" href="https://proadvisor-group.com/" target="_blank" rel="noopener noreferrer">
+//             Pro Advisor Group.
+//           </Link>
+//         </p>
+//       </div>
+//       <div className="intro-btn">
+//         <Button onClick={handleScrollToAbout}>
+//           <div className="button-text">
+//             <span>Read More </span>
+//             <FiCornerRightDown />
+//           </div>
+//         </Button>
+//       </div>
+//     </section>
+//   );
+// };
+
+return (
+  <section className="intro-wrapper">
+    <div className="intro-headline">
+      <p>Hi, my name is</p>
+      <h1 className="name">Prince Kyei.</h1>
+      <h1 className="description">I build things for the web.</h1>
+    </div>
+
+    <div className="intro-subHeadline">
+      <p>
+        I&apos;m a Webmaster, Web Designer & Web Developer with experience in UI/UX, Figma, 
+        WordPress, and frontend development and backend development. I focus on creating accessible, user-friendly websites and 
+        digital experiences. Currently, I&apos;m contributing as a freelancer at{' '}
+        <Link
+          className="link-style"
+          href="https://proadvisor-group.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pro Advisor Group
+        </Link>
+        .
+      </p>
+    </div>
+
+    <div className="intro-btn">
+      <Button onClick={handleScrollToAbout}>
+        <div className="button-text">
+          <span>Read More </span>
+          <FiCornerRightDown />
+        </div>
+      </Button>
+    </div>
+  </section>
+);
+}
 
 export default Intro;

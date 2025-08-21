@@ -15,71 +15,99 @@ const About = () => {
         </div>
 
         <div className='description'>
-          <p>
+          {/* <p>
             Creative and detail-driven Frontend Developer with strong expertise in React, Next.js, and TypeScript. Passionate about crafting polished, responsive, and user-friendly interfaces with a strong eye for design using Figma. Competent in backend development with Node.js, MongoDB, and PostgreSQL, enabling full-stack contributions when needed. Known for clean code, scalable architecture, and thriving in agile, cross-functional environments.
-          </p>
-          <p>
+          </p> */}
+           <p>
+           Motivated web professional with experience in website management, CMS publishing, SEO basics, and digital design (Figma, Photoshop, Adobe XD). 
+          </p> 
+          
+          {/* <p>
             Over the years, I’ve contributed to dynamic projects across industries, including property management platforms and user-friendly <Link className='link-style' href='https://www.afitpilot.com/' target="_blank" rel="noopener noreferrer">training applications</Link>. My approach blends technical expertise with a commitment to accessibility, performance, and collaborative teamwork.
+          </p> */}
+           <p>
+           Skilled at updating, optimizing, and maintaining websites while designing user-friendly interfaces and visuals, including property management platforms and user-friendly <Link className='link-style' href='https://www.afitpilot.com/' target="_blank" rel="noopener noreferrer">training applications</Link>.
           </p>
-          <p>
+          {/* <p>
             Most recently, I’ve focused on building global real estate and e-commerce platforms, enhancing frontend experiences with responsive design, efficient API integrations, and robust state management. My goal is to continue crafting impactful digital products that users love.
+          </p> */}
+          <p>
+          Strong foundation in web development (frontend & backend) with React, Next.js, and Node.js, ensuring smooth collaboration between design and technical teams. Curious, detail-oriented, and eager to grow into a full-fledged Webmaster & Digital Creative Designer role.
           </p>
         </div>
 
         <div className='technologies'>
           <p>Here are a few technologies I’ve been working with recently:</p>
           <div className='tech-stacks'>
-            <div className="list">
-              <MdArrowCircleRight />
-              <span>JavaScript (ES6+)</span>
-            </div>
-            <div className="list">
-              <MdArrowCircleRight />
-              <span>React</span>
-            </div>
-            <div className="list">
-              <MdArrowCircleRight />
-              <span>Node.js</span>
-            </div>
-            <div className="list">
-              <MdArrowCircleRight />
-              <span>TypeScript</span>
-            </div>
-            <div className="list">
-              <MdArrowCircleRight />
-              <span>MongoDB</span>
-            </div>
-            <div className="list">
-              <MdArrowCircleRight />
-              <span>PostgresSql</span>
-            </div>
-            <div className="list">
-              <MdArrowCircleRight />
-              <span>Next.js</span>
-            </div>
-            <div className="list">
-              <MdArrowCircleRight />
-              <span>Express.js</span>
-            </div>
-            <div className="list">
-              <MdArrowCircleRight />
-              <span>Redux Toolkit</span>
-            </div>
-            <div className="list">
-              <MdArrowCircleRight />
-              <span>Tailwind CSS</span>
-            </div>
-            <div className="list">
-              <MdArrowCircleRight />
-              <span>Figma</span>
-            </div>
-            <div className="list">
-              <MdArrowCircleRight />
-              <span>Firebase</span>
-            </div>
-          </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>JavaScript (ES6+)</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>React</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>Node.js</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>TypeScript</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>MongoDB</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>PostgresSQL</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>Next.js</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>Express.js</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>Redux Toolkit</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>Tailwind CSS</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>Figma</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>Firebase</span>
+  </div>
+  {/* Added Webmaster & Web Design Tools */}
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>WordPress (CMS & REST API)</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>SEO Basics & Webmaster Tools</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>Adobe Photoshop / Adobe XD</span>
+  </div>
+  <div className="list">
+    <MdArrowCircleRight />
+    <span>UI/UX Design Principles</span>
+  </div>
+</div>
+
         </div>
-      </div> {/* ✅ Missing closing div fixed here */}
+      </div> 
 
       <div className='image-wrapper'>
         <Image

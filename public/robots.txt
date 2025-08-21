@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://prynskaf.netlify.app
+
+# Sitemaps
+Sitemap: https://prynskaf.netlify.app/sitemap.xml

@@ -17,10 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Personal Website",
   description: "Prince Kyei's Personal Website",
-  // icons: {
-  //   icon: "/logopk.png",
-  // },
-  // viewport: "width=device-width, initial-scale=1", // ✅ critical for mobile
+  verification: {
+    google: "Mhleg92J0NHVVgBwHWJ1yvWoE0CKLlKrAC7YMQSIYPc",
+  },
 };
 
 export default function RootLayout({

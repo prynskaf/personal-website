@@ -5,8 +5,8 @@ import './Resume.scss';
 
 const Resume = () => {
   const handleResumeClick = () => {
-    // Open the PDF in a new tab
-    window.open('/my-resume.pdf', '_blank');
+    // window.open('/my-resume.pdf', '_blank');
+    window.open('/Prince_Kyei_CV.docx', '_blank');
   };
 
   return (

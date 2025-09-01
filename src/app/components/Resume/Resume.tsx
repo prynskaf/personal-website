@@ -5,8 +5,7 @@ import './Resume.scss';
 
 const Resume = () => {
   const handleResumeClick = () => {
-    // window.open('/my-resume.pdf', '_blank');
-    window.open('/Prince_Kyei_CV.docx', '_blank');
+    window.open('/my-resume.pdf', '_blank');
   };
 
   return (

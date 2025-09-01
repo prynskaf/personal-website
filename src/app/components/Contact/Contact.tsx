@@ -14,7 +14,7 @@ export default function Contact() {
       opportunities, and my inbox is always open.
        Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
       </p>
-      <Link href="mailto:prynskaf.12@gmail.com" className={styles.contact__button} >
+      <Link href="mailto:princekyei.dev@gmail.com" className={styles.contact__button} >
        <Button>Say Hello</Button>
       </Link>
     </section>

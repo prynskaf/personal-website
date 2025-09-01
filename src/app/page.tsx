@@ -6,7 +6,7 @@ import Intro from './components/Intro/Intro';
 import About from './components/About/About';
 import Experience from './components/Experience/Work';
 import Project from './components/Project/Project';
-import NoteWorthy from './components/NoteWorthy/NoteWorthy';
+// import NoteWorthy from './components/NoteWorthy/NoteWorthy';
 import Contact from './components/Contact/Contact';import './styles/home.scss';
 import GoogleAnalytics from './lib/googleAnalytics';
 
@@ -29,6 +29,7 @@ const Section = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.div
       ref={ref}
+       className="home-section"  
       variants={fadeInVariant}
       initial="hidden"
       animate={controls}
@@ -54,12 +55,10 @@ const Home = () => {
       </Section>
       <Section>
         <Project />
-        {/* <h1>helo</h1> */}
-         {/* <About /> */}
       </Section>
-      <Section>
+      {/* <Section>
         <NoteWorthy />
-      </Section>
+      </Section> */}
       <Section>
         <Contact />
       </Section>

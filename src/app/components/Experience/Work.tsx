@@ -34,8 +34,9 @@ const Experience: React.FC = () => {
                     <div className="experience-details">
                         <div className="experience-item">
                             <h3 className="role ">
-                                {selectedExperience.role}{""} @{" "}
-                                <Link className='link-style' href={selectedExperience.link} target="_blank" rel="noopener noreferrer">{selectedExperience.company}</Link>
+                                {selectedExperience.role}{""} 
+                                <br />
+                               <Link className='link-style' href={selectedExperience.link || '#'} target="_blank" rel="noopener noreferrer">{`@${selectedExperience.company}`}</Link>
                             </h3>
                             <p className="period">{selectedExperience.period}</p>
                             <ul className="achievements">

@@ -15,10 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Personal Website",
-  description: "Prince Kyei's Personal Website",
+  title: "Portfolio",
+  description: "Prince Kyei's Portfolio",
   verification: {
     google: "Mhleg92J0NHVVgBwHWJ1yvWoE0CKLlKrAC7YMQSIYPc",
+  },
+  icons: {
+    icon: "/logopk.png",
   },
 };
 

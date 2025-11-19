@@ -5,6 +5,7 @@ import './Resume.scss';
 
 const Resume = () => {
   const handleResumeClick = () => {
+    if (typeof window === 'undefined') return;
     window.open('/my-resume.pdf', '_blank');
   };
 

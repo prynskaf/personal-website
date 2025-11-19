@@ -18,7 +18,10 @@ const fadeInVariant = {
 
 const Section = ({ children }: { children: React.ReactNode }) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2 });
+  const [ref, inView] = useInView({ 
+    threshold: 0.1,
+    triggerOnce: true
+  });
 
   React.useEffect(() => {
     if (inView) {

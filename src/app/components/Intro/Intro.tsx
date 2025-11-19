@@ -8,6 +8,7 @@ import { FiCornerRightDown } from 'react-icons/fi';
 
 const Intro = () => {
   const handleScrollToAbout = () => {
+    if (typeof window === 'undefined') return;
     const aboutSection = document.querySelector('#About');
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });

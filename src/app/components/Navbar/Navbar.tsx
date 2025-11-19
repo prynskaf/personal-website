@@ -9,6 +9,7 @@ const Navbar: React.FC = () => {
   const [nav] = navlinks;
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
@@ -17,16 +18,21 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setMenuOpen((v) => !v);
   const closeMenu = () => setMenuOpen(false);
 
-  // Close on scroll styling
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const handleScroll = () => setIsScrolled(window.scrollY > 0);
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close on click outside
   useEffect(() => {
-    if (!menuOpen) return;
+    if (!menuOpen || typeof window === 'undefined') return;
 
     const onDocClick = (e: MouseEvent) => {
       const target = e.target as Node;
@@ -44,7 +50,6 @@ const Navbar: React.FC = () => {
     document.addEventListener('click', onDocClick);
     document.addEventListener('keydown', onKey);
 
-    // Prevent background scroll while menu is open
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
 
@@ -56,7 +61,7 @@ const Navbar: React.FC = () => {
   }, [menuOpen]);
 
   return (
-    <header className={`Navbar-wrapper ${isScrolled ? 'scrolled' : ''}`}>
+    <header className={`Navbar-wrapper ${isScrolled ? 'scrolled' : ''}`} suppressHydrationWarning>
       <Link href="/" className="logo-box">
         <div className="logo-box Navbar-logo">
           {nav.logo}

@@ -3,11 +3,11 @@ export const projects = [
     title: "CV Generator",
     type: "Featured Project",
     description:
-      "CV Generator is an AI-powered resume creation platform that revolutionizes job applications. It intelligently analyzes job descriptions to tailor your CV with relevant skills and experiences, while maintaining ATS-optimized formatting and keyword optimization across multiple professional templates. Beyond CV generation, the platform creates personalized cover letters and provides job match analysis with scoring, skill gap identification, and improvement suggestions. Built with Next.js, Tailwind CSS, and powered by Google Gemini and OpenAI, the application features secure resume storage via Supabase (PostgreSQL) and high-quality PDF generation through Puppeteer. This project demonstrates expertise in combining cutting-edge AI with modern web development to create an invaluable tool for job seekers.",
+      "CV Generator is an AI-powered resume creation platform that analyzes job descriptions to tailor CVs with relevant skills and experiences. It maintains ATS-friendly formatting and keyword optimization, offers multiple templates, generates cover letters, and provides job match scoring with skill gap analysis. Built with Next.js, Tailwind CSS, Google Gemini, and OpenAI, it includes secure resume storage via Supabase (PostgreSQL) and high-quality PDF generation through Puppeteer.",
     technologies: [
       "Next.js",
-      "Supabase(PostgreSQL)",
-      "Google-Gemini",
+      "Supabase (PostgreSQL)",
+      "Google Gemini",
       "OpenAI",
       "Tailwind CSS",
       "TypeScript",
@@ -17,7 +17,6 @@ export const projects = [
     code: "https://github.com/prynskaf/cv-generator.git",
     webkitURL: "https://cv-generator-snowy-psi.vercel.app/",
   },
-
   {
     title: "AlwaysApply",
     type: "Featured Project",
@@ -35,7 +34,6 @@ export const projects = [
     code: "https://github.com/prynskaf/job-portal.git",
     webkitURL: "https://job-portal-eta-taupe.vercel.app/",
   },
-
   {
     title: "Shopper",
     type: "Featured Project",

@@ -10,10 +10,10 @@
       padding: 0.5rem 1rem;
       font-size: 1rem;
       font-weight: 600;
-      color: rgb(100, 255, 218);
-      // background-color: rgba(10, 25, 47, 0.85);
+      text-decoration: none;
+      color: var(--green);
       background-color: inherit;
-      border: 2px solid rgb(100, 255, 218);
+      border: 2px solid var(--green);
       border-radius: 5px;
       cursor: pointer;
       position: relative;
@@ -21,7 +21,7 @@
       transition: all 0.3s ease; 
 
       &:hover {
-        border: 2px solid rgb(0, 128, 128);
+        border-color: rgb(0, 128, 128);
       }
     }
   

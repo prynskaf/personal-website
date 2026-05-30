@@ -5,11 +5,11 @@ import { useInView } from 'react-intersection-observer';
 import Intro from './components/Intro/Intro';
 import About from './components/About/About';
 import Experience from './components/Experience/Work';
+import SaasApps from './components/SaasApps/SaasApps';
 import Project from './components/Project/Project';
-// import NoteWorthy from './components/NoteWorthy/NoteWorthy';
-import Contact from './components/Contact/Contact';import './styles/home.scss';
+import Contact from './components/Contact/Contact';
+import './styles/home.scss';
 import GoogleAnalytics from './lib/googleAnalytics';
-
 
 const fadeInVariant = {
   hidden: { opacity: 0, y: 50 },
@@ -18,7 +18,7 @@ const fadeInVariant = {
 
 const Section = ({ children }: { children: React.ReactNode }) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ 
+  const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
   });
@@ -32,7 +32,7 @@ const Section = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.div
       ref={ref}
-       className="home-section"  
+      className="home-section"
       variants={fadeInVariant}
       initial="hidden"
       animate={controls}
@@ -57,11 +57,11 @@ const Home = () => {
         <Experience />
       </Section>
       <Section>
+        <SaasApps />
+      </Section>
+      <Section>
         <Project />
       </Section>
-      {/* <Section>
-        <NoteWorthy />
-      </Section> */}
       <Section>
         <Contact />
       </Section>

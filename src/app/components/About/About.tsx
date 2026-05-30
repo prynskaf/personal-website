@@ -3,107 +3,80 @@ import "./About.scss"
 import Image from 'next/image'
 import { MdArrowCircleRight } from "react-icons/md"
 import Link from 'next/link'
+import SectionHeading from '../SectionHeading/SectionHeading'
+import { CV_WISER_URL } from '@/app/utils/siteConfig'
+
+const techCategories = [
+  {
+    title: 'Frontend',
+    items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+  },
+  {
+    title: 'Backend & Data',
+    items: ['Node.js', 'PostgreSQL', 'Supabase', 'MongoDB'],
+  },
+  {
+    title: 'SaaS & Tools',
+    items: ['Stripe', 'OpenAI', 'Figma', 'Firebase'],
+  },
+]
 
 const About = () => {
   return (
     <section id='About' className='about-wrapper'>
       <div className='text-wrapper'>
-        <div className='title'>
-          <h4>01.</h4>
-          <h1>About Me</h1>
-          {/* <hr /> */}
-        </div>
+        <SectionHeading number="01." title="About Me" />
 
         <div className='description'>
           <p>
-            Creative and detail-driven Frontend Developer with strong expertise in React, Next.js, and TypeScript. Passionate about crafting polished, responsive, and user-friendly interfaces with a strong eye for design using Figma. Competent in backend development with Node.js, MongoDB, and PostgreSQL, enabling full-stack contributions when needed. Known for clean code, scalable architecture, and thriving in agile, cross-functional environments.
+            I&apos;m a frontend-focused developer specializing in React, Next.js, and TypeScript, with experience
+            building real-world web applications from idea to deployment.
           </p>
           <p>
-            Over the years, I’ve contributed to dynamic projects across industries, including property management platforms and user-friendly  <Link className='link-style' href='https://www.afitpilot.com/' target="_blank" rel="noopener noreferrer">training applications</Link>. My approach blends technical expertise with a commitment to accessibility, performance, and collaborative teamwork.
+            I&apos;ve worked on platforms including a{' '}
+            <Link className='link-underline' href='https://www.afitpilot.com/' target="_blank" rel="noopener noreferrer">
+              real estate application
+            </Link>
+            {' '}and AI-powered tools, focusing on performance, usability, and scalable UI architecture.
           </p>
           <p>
-            Most recently, I’ve focused on building AI-enhanced email support application and <Link className='link-style' href='https://www.afitpilot.com/' target="_blank" rel="noopener noreferrer"> Global property real estate platform, </Link> enhancing frontend experiences with responsive design, efficient API integrations, and robust state management.
-            My goal is to continue crafting impactful digital products that users love.
+            Currently, I&apos;m building{' '}
+            <Link className='link-underline' href={CV_WISER_URL} target="_blank" rel="noopener noreferrer">
+              CV Wiser
+            </Link>
+            , my own SaaS product, while continuing to improve my skills.
+          </p>
+          <p>
+            I&apos;m open to opportunities where I can contribute to meaningful products, grow as an engineer,
+            and collaborate with strong teams.
           </p>
         </div>
-        <div className='technologies'>
-          <p>Here are a few technologies I’ve been working with recently:</p>
-          <div className='tech-stacks'>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>JavaScript (ES6+)</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>React</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>Node.js</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>TypeScript</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>MongoDB</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>PostgresSQL</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>Next.js</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>Express.js</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>Redux Toolkit</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>Tailwind CSS</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>Figma</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>Firebase</span>
-  </div>
-  {/* Added Webmaster & Web Design Tools */}
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>WordPress (CMS & REST API)</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>SEO Basics & Webmaster Tools</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>Adobe Photoshop / Adobe XD</span>
-  </div>
-  <div className="list">
-    <MdArrowCircleRight />
-    <span>UI/UX Design Principles</span>
-  </div>
-</div>
 
+        <div className='technologies'>
+          <p>Technologies I work with:</p>
+          <div className='tech-categories'>
+            {techCategories.map(({ title, items }) => (
+              <div className="tech-category" key={title}>
+                <h4 className="tech-category__title">{title}</h4>
+                <div className="tech-stacks">
+                  {items.map((tech) => (
+                    <div className="list" key={tech}>
+                      <MdArrowCircleRight />
+                      <span>{tech}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div> 
+      </div>
 
       <div className='image-wrapper'>
         <Image
           className='about-image'
           src='/prince.jpg'
-          alt='about-image'
+          alt='Portrait of Prince Kyei, Frontend Developer & SaaS Founder'
           width={500}
           height={300}
         />

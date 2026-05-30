@@ -9,6 +9,18 @@ export type WorkExperience = {
 
 export const workData: WorkExperience[] = [
   {
+    id: 5,
+    company: "CV Wiser",
+    role: "FOUNDER & DEVELOPER",
+    period: "2025 - Present",
+    link: "https://cvwiser.com/",
+    achievements: [
+      "Founded and launched CV Wiser — a SaaS platform that helps job seekers generate AI-tailored CVs and cover letters, beat ATS filters, and track applications from a single dashboard.",
+      "Built the full product from idea to deployment: profile builder, job-description matching, ATS score breakdown, in-editor AI assistant, and PDF/DOCX export.",
+      "Shipped and maintain the live product at cvwiser.com using Next.js, TypeScript, Supabase, OpenAI, and Stripe.",
+    ]
+  },
+  {
     id: 1,
     company: "BeCode [Brussels]",
     role: "JUNIOR WEB DEVELOPER",

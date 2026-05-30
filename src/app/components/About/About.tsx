@@ -6,6 +6,21 @@ import Link from 'next/link'
 import SectionHeading from '../SectionHeading/SectionHeading'
 import { CV_WISER_URL } from '@/app/utils/siteConfig'
 
+const techCategories = [
+  {
+    title: 'Frontend',
+    items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+  },
+  {
+    title: 'Backend & Data',
+    items: ['Node.js', 'PostgreSQL', 'Supabase', 'MongoDB'],
+  },
+  {
+    title: 'SaaS & Tools',
+    items: ['Stripe', 'OpenAI', 'Figma', 'Firebase'],
+  },
+]
+
 const About = () => {
   return (
     <section id='About' className='about-wrapper'>
@@ -36,17 +51,21 @@ const About = () => {
             and collaborate with strong teams.
           </p>
         </div>
+
         <div className='technologies'>
-          <p>Here are a few technologies I&apos;ve been working with recently:</p>
-          <div className='tech-stacks'>
-            {[
-              'JavaScript (ES6+)', 'React', 'Node.js', 'TypeScript', 'MongoDB',
-              'PostgreSQL', 'Next.js', 'Express.js', 'Redux Toolkit', 'Tailwind CSS',
-              'Supabase', 'Stripe', 'OpenAI', 'Figma', 'Firebase',
-            ].map((tech) => (
-              <div className="list" key={tech}>
-                <MdArrowCircleRight />
-                <span>{tech}</span>
+          <p>Technologies I work with:</p>
+          <div className='tech-categories'>
+            {techCategories.map(({ title, items }) => (
+              <div className="tech-category" key={title}>
+                <h4 className="tech-category__title">{title}</h4>
+                <div className="tech-stacks">
+                  {items.map((tech) => (
+                    <div className="list" key={tech}>
+                      <MdArrowCircleRight />
+                      <span>{tech}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

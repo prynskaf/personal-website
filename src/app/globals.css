@@ -54,6 +54,21 @@ html, body {
   overflow-x: clip;
   min-width: 0;
   box-sizing: border-box;
+
+  &:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: min(100%, 1000px);
+    height: 1px;
+    margin: 40px auto 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(100, 255, 218, 0.15) 20%,
+      rgba(100, 255, 218, 0.15) 80%,
+      transparent
+    );
+  }
 }
 
 .link-underline {

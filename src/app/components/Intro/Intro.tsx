@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Intro.scss';
 import Link from 'next/link';
-import { FiCornerRightDown } from 'react-icons/fi';
+import { MdDownload, MdOutlineKeyboardArrowDown, MdOutlineOpenInNew } from 'react-icons/md';
 import { CV_WISER_URL } from '@/app/utils/siteConfig';
 
 const containerVariants = {
@@ -40,31 +40,52 @@ const Intro = () => {
         <motion.div className="intro-headline" variants={itemVariants}>
           <p>Hi, my name is</p>
           <h1 className="name">Prince Kyei.</h1>
-          <h2 className="description">I build SaaS web applications.</h2>
+          <p className="intro-role">Founder &amp; Frontend Engineer</p>
+          <h2 className="description">
+            I build AI-powered SaaS that helps people land jobs faster.
+          </h2>
         </motion.div>
 
         <motion.div className="intro-subHeadline" variants={itemVariants}>
           <p>
-            Founder @{' '}
+            Currently shipping{' '}
             <Link className="link-underline" href={CV_WISER_URL} target="_blank" rel="noopener noreferrer">
               CV Wiser
             </Link>
-            {' '}— helping job seekers beat ATS &amp; land interviews faster with an AI CV &amp; cover letter builder.
-          </p>
-          <p className="intro-subHeadline__secondary">
-            Frontend-focused developer specializing in React, Next.js, and TypeScript — building real-world
-            apps from idea to deployment.
+            {' '}— tailored CVs, cover letters, ATS scoring, and application tracking for job seekers.
           </p>
         </motion.div>
 
-        <motion.div className="intro-btn" variants={itemVariants}>
+        <motion.div className="intro-ctas" variants={itemVariants}>
+          <Link
+            href={CV_WISER_URL}
+            className="intro-cta intro-cta--primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View CV Wiser
+            <span className="intro-cta__icon" aria-hidden="true">
+              <MdOutlineOpenInNew />
+            </span>
+          </Link>
+          <Link
+            href="/my-resume.pdf"
+            className="intro-cta intro-cta--secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="intro-cta__icon" aria-hidden="true">
+              <MdDownload />
+            </span>
+            Resume
+          </Link>
           <button
             type="button"
-            className="intro-scroll-btn"
+            className="intro-cta intro-cta--secondary intro-cta--icon-only"
             onClick={handleScrollToAbout}
             aria-label="Scroll to about section"
           >
-            <FiCornerRightDown aria-hidden />
+            <MdOutlineKeyboardArrowDown aria-hidden />
           </button>
         </motion.div>
       </motion.div>

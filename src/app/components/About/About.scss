@@ -45,6 +45,24 @@
         margin-bottom: 15px;
       }
 
+      .tech-categories {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .tech-category {
+        &__title {
+          color: var(--green);
+          font-family: var(--font-mono);
+          font-size: 0.85rem;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+      }
+
       .tech-stacks {
         display: grid;
         /* Responsive grid that won’t overflow on narrow screens */

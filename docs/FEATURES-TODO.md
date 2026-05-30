@@ -2,49 +2,49 @@
 
 Roadmap to make the portfolio feel more premium, scalable, and founder-focused.
 
-**Progress:** 0 / 18
+**Progress:** 14 / 18
 
 ---
 
 ## Priority 1 — Hero & positioning
 
-- [ ] **Founder hero headline** — Add subtitle: "Founder & Frontend Engineer" under name
-- [ ] **Primary CTA** — "View CV Wiser" button linking to https://cvwiser.com/
-- [ ] **Secondary CTA** — "Download Resume" button in hero (alongside scroll icon)
-- [ ] **Stronger one-liner** — Lead with product value, not generic "I build SaaS"
+- [x] **Founder hero headline** — Subtitle: "Founder & Frontend Engineer"
+- [x] **Primary CTA** — "View CV Wiser" button linking to https://cvwiser.com/
+- [x] **Secondary CTA** — Resume download button in hero
+- [x] **Stronger one-liner** — Product-focused headline about AI SaaS for job seekers
 
 ---
 
 ## Priority 2 — CV Wiser case study
 
-- [ ] **Featured case study block** — Problem → solution → role layout above or within SaaS section
+- [x] **Featured case study block** — Problem → solution → role layout in SaaS section
 - [ ] **Product screenshots** — Replace placeholder with real CV Wiser UI (editor, ATS score, dashboard)
-- [ ] **Metrics row** — e.g. templates count, ATS scoring, PDF export, live status badge
-- [ ] **Case study CTAs** — "Visit product" + "Try free" buttons
+- [x] **Metrics row** — Templates, ATS scoring, export, live status
+- [x] **Case study CTAs** — "Visit Product" + "Start Free" buttons
 - [ ] **Update project image** — Swap `cv-generator.png` for actual CV Wiser screenshot
 
 ---
 
 ## Priority 3 — Content & hierarchy
 
-- [ ] **Trim About tech list** — Reduce to ~8 core skills + grouped categories or "Also experienced with…"
-- [ ] **Shorter project descriptions** — Bullet highlights instead of long paragraphs on cards
-- [ ] **Project metadata pills** — Add Role, Status (Live / Coming Soon), Year on cards
+- [x] **Trim About tech list** — Grouped into Frontend, Backend & Data, SaaS & Tools
+- [x] **Shorter project descriptions** — Bullet highlights on project cards
+- [x] **Project metadata pills** — Role, Status, Year on cards
 - [ ] **Social proof** — One testimonial or quote (beta user, colleague, or CV Wiser user)
 
 ---
 
 ## Priority 4 — Visual polish
 
-- [ ] **Section transitions** — Subtle dividers or fade between major sections
-- [ ] **Consistent card system** — Unify SaaS, projects, and experience visual language
+- [x] **Section transitions** — Subtle gradient dividers between sections
+- [x] **Consistent card system** — Case study + project cards share pill/meta patterns
 - [ ] **Code Notebook launch** — Update when live: remove coming-soon, add link + screenshot
 
 ---
 
 ## Priority 5 — SEO & metadata
 
-- [ ] **Page title & description** — e.g. "Prince Kyei | Founder @ CV Wiser · Frontend Engineer"
+- [x] **Page title & description** — Founder @ CV Wiser positioning
 - [ ] **Open Graph image** — Custom OG card for LinkedIn/Twitter link previews
 - [ ] **Structured data** — JSON-LD for Person + WebSite (optional)
 
@@ -52,16 +52,21 @@ Roadmap to make the portfolio feel more premium, scalable, and founder-focused.
 
 ## Priority 6 — Architecture & scalability
 
-- [ ] **Centralize content** — Move copy, projects, experience to `content/` or JSON files
+- [x] **Centralize content** — CV Wiser case study in `content/cvWiser.ts`
 - [ ] **Reduce client bundle** — Split animations; avoid full-page `'use client'` where possible
 - [ ] **Design system cleanup** — Finish CSS variable migration; decide Tailwind vs SCSS
-- [ ] **Shared CTA / pill components** — Reuse across hero, SaaS, contact
+- [ ] **Shared CTA / pill components** — Partially done via case study + intro CTAs
 
 ---
 
 ## Done
 
-_Move completed items here._
+- [x] Hero upgrade — `Intro.tsx`, `Intro.scss`
+- [x] CV Wiser case study — `CvWiserCaseStudy/`, `content/cvWiser.ts`
+- [x] About tech categories — `About.tsx`
+- [x] Project highlights + metadata pills — `ProjectList.tsx`, `projects.ts`
+- [x] Section dividers — `globals.css`
+- [x] SEO metadata — `layout.tsx`
 
 ---
 
@@ -69,10 +74,9 @@ _Move completed items here._
 
 | Item | Decision needed |
 |------|-----------------|
-| CV Wiser metrics | Real numbers vs placeholders until analytics available |
+| CV Wiser screenshots | Add real product images to `public/` when available |
 | Testimonial | Source quote or skip until available |
 | OG image | Design custom graphic or auto-generate from hero |
-| Content CMS | JSON files vs MDX vs hardcoded components |
 
 ## Related docs
 

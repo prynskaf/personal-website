@@ -29,59 +29,118 @@
             color: var(--lightest-slate);
             font-size: clamp(2rem, 6vw, 3rem);
             font-weight: bolder;
+            margin-bottom: 8px;
+        }
+
+        .intro-role {
+            color: var(--green);
+            font-family: var(--font-mono);
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            font-weight: 600;
+            margin-bottom: 16px;
         }
 
         .description {
             color: var(--slate);
-            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-size: clamp(1.5rem, 4.5vw, 2.5rem);
             font-weight: bolder;
             margin-bottom: 10px;
+            line-height: 1.25;
+            max-width: 620px;
         }
     }
 
     .intro-subHeadline {
         p {
             color: var(--slate);
-            font-weight: 600;
-            margin-bottom: 10px;
-            max-width: 540px;
-            line-height: 1.6;
-
-            &:not(:last-child) {
-                margin-bottom: 12px;
-            }
-        }
-
-        &__secondary {
-            color: var(--slate);
             font-weight: 500;
-            font-size: 0.95rem;
+            margin-bottom: 24px;
+            max-width: 520px;
+            line-height: 1.65;
         }
     }
 
-    .intro-btn {
+    .intro-ctas {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
         margin-top: 8px;
     }
 
-    .intro-scroll-btn {
+    .intro-cta {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 48px;
-        height: 48px;
-        border: 1.5px solid var(--green);
-        border-radius: 8px;
-        background-color: transparent;
-        color: var(--green);
-        font-size: 22px;
+        gap: 8px;
+        min-height: 44px;
+        padding: 0.65rem 1.25rem;
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        border-radius: 6px;
         cursor: pointer;
-        transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+        transition: all 0.25s ease;
 
-        &:hover {
+        &__icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        &--primary {
             color: var(--navy);
-            background-color: var(--green);
-            border-color: var(--green);
-            transform: translateY(-3px);
+            background: var(--green);
+            border: 1.5px solid var(--green);
+
+            .intro-cta__icon {
+                background: rgba(10, 25, 47, 0.12);
+            }
+
+            &:hover {
+                box-shadow: 0 0 20px rgba(100, 255, 218, 0.35);
+                transform: translateY(-2px);
+            }
+        }
+
+        &--secondary {
+            color: var(--green);
+            background: transparent;
+            border: 1.5px solid rgba(100, 255, 218, 0.55);
+
+            .intro-cta__icon {
+                background: rgba(100, 255, 218, 0.1);
+            }
+
+            &:hover {
+                background: rgba(100, 255, 218, 0.08);
+                border-color: var(--green);
+            }
+        }
+
+        &--icon-only {
+            padding: 0.65rem;
+            min-width: 44px;
+            font-size: 1.25rem;
+
+            svg {
+                display: block;
+            }
+
+            &:hover {
+                color: var(--navy);
+                background: var(--green);
+                border-color: var(--green);
+                transform: translateY(-2px);
+            }
         }
     }
 }
@@ -91,15 +150,13 @@
         padding: 60px 20px;
         min-height: auto;
 
-        .intro-subHeadline {
-            p {
-                max-width: 100%;
-                font-size: 0.95rem;
-            }
+        .intro-subHeadline p {
+            max-width: 100%;
+            font-size: 0.95rem;
+        }
 
-            &__secondary {
-                font-size: 0.9rem;
-            }
+        .intro-ctas {
+            gap: 10px;
         }
     }
 }

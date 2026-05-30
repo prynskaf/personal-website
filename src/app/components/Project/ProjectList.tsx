@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { MdArrowCircleRight } from 'react-icons/md';
 import { ProjectItem } from '@/app/utils/projects/saasProjects';
 
 interface ProjectListProps {
@@ -14,15 +15,38 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
         <div className={`project${project.comingSoon ? ' project--coming-soon' : ''}`} key={`${project.title}-${index}`}>
           <div className="project-content">
             <div className="project-label">{project.type}</div>
+
+            {(project.role || project.status || project.year) && (
+              <ul className="project-meta">
+                {project.role && <li>{project.role}</li>}
+                {project.status && <li>{project.status}</li>}
+                {project.year && <li>{project.year}</li>}
+              </ul>
+            )}
+
             <h3 className="project-title">{project.title}</h3>
+
             <div className="project-description">
-              <p>{project.description}</p>
+              {project.highlights ? (
+                <ul className="project-highlights">
+                  {project.highlights.map((item) => (
+                    <li key={item}>
+                      <MdArrowCircleRight aria-hidden className="project-highlights__icon" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p>{project.description}</p>
+              )}
             </div>
+
             <ul className="project-tech-list">
               {project.technologies.map((tech, techIndex) => (
                 <li key={techIndex}>{tech}</li>
               ))}
             </ul>
+
             <div className="project-links">
               {!project.comingSoon && project.code && (
                 <Link href={project.code} aria-label="GitHub Link" target="_blank" rel="noopener noreferrer">

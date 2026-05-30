@@ -1,58 +1,61 @@
-'us client';
+'use client';
 import React, { useState } from 'react';
 import './Work.scss';
 import Link from 'next/link';
 import { workData } from '@/app/utils/workData/workData';
+import SectionHeading from '../SectionHeading/SectionHeading';
 
 const Experience: React.FC = () => {
-        // Sort workData in descending order based on id
-        const sortedWorkData = [...workData].sort((a, b) => b.id - a.id);
-        const [selectedCompany, setSelectedCompany] = useState<number>(sortedWorkData[0].id);
+  const sortedWorkData = [...workData].sort((a, b) => b.id - a.id);
+  const [selectedCompany, setSelectedCompany] = useState<number>(sortedWorkData[0].id);
 
-    const selectedExperience = workData.find(work => work.id === selectedCompany);
+  const selectedExperience = workData.find(work => work.id === selectedCompany);
 
-    return (
-        <section id='Experience' className="work-section">
-            <h2 className="work-title">
-                <span className="work-number">02.</span> Where I&apos;ve Worked
-            </h2>
+  return (
+    <section id='Experience' className="work-section">
+      <SectionHeading number="02." title="Where I've Worked" />
 
-            <div className="work-content">
-                <div className="companies-list">
-                {sortedWorkData.map((work) => (
-                        <div
-                            key={work.id}
-                            className={`company-item ${selectedCompany === work.id ? 'active' : ''}`}
-                            onClick={() => setSelectedCompany(work.id)}
-                        >
-                            {work.company}
-                        </div>
-                    ))}
-                </div>
+      <div className="work-content">
+        <div className="companies-list" role="tablist" aria-label="Work history">
+          {sortedWorkData.map((work) => (
+            <button
+              key={work.id}
+              type="button"
+              role="tab"
+              aria-selected={selectedCompany === work.id}
+              className={`company-item ${selectedCompany === work.id ? 'active' : ''}`}
+              onClick={() => setSelectedCompany(work.id)}
+            >
+              {work.company}
+            </button>
+          ))}
+        </div>
 
-                {selectedExperience && (
-                    <div className="experience-details">
-                        <div className="experience-item">
-                            <h3 className="role ">
-                                {selectedExperience.role}{""} 
-                                <br />
-                               <Link className='link-style' href={selectedExperience.link || '#'} target="_blank" rel="noopener noreferrer">{`@${selectedExperience.company}`}</Link>
-                            </h3>
-                            <p className="period">{selectedExperience.period}</p>
-                            <ul className="achievements">
-                                {selectedExperience.achievements.map((achievement, idx) => (
-                                    <li key={idx}>
-                                        <span className="bullet">▹</span>
-                                        {achievement}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                )}
+        {selectedExperience && (
+          <div className="experience-details" role="tabpanel">
+            <div className="experience-item">
+              <h3 className="role">
+                {selectedExperience.role}
+                <br />
+                <Link className="link-underline" href={selectedExperience.link || '#'} target="_blank" rel="noopener noreferrer">
+                  {`@${selectedExperience.company}`}
+                </Link>
+              </h3>
+              <p className="period">{selectedExperience.period}</p>
+              <ul className="achievements">
+                {selectedExperience.achievements.map((achievement, idx) => (
+                  <li key={idx}>
+                    <span className="bullet">▹</span>
+                    {achievement}
+                  </li>
+                ))}
+              </ul>
             </div>
-        </section>
-    );
+          </div>
+        )}
+      </div>
+    </section>
+  );
 };
 
 export default Experience;

@@ -7,6 +7,7 @@ export interface NavTypes {
     logo: string;
     about: NavItem;
     experience: NavItem;
+    saas: NavItem;
     work: NavItem;
     contact: NavItem;
 }
@@ -22,12 +23,16 @@ export const navlinks: NavTypes[] = [
             id: "02",
             title: 'Experience',
         },
-        work: {
+        saas: {
             id: "03",
+            title: 'SaaS',
+        },
+        work: {
+            id: "04",
             title: 'Work',
         },
         contact: {
-            id: "04",
+            id: "05",
             title: 'Contact',
         }
     }

@@ -1,9 +1,11 @@
 'use client';
-import { FiGithub, FiInstagram, FiTwitter, FiLinkedin, FiCodepen } from 'react-icons/fi';
+
+import { FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi';
 import { GoStar, GoRepoForked } from 'react-icons/go';
 import styles from './Footer.module.scss';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { SITE_EMAIL, GITHUB_URL, LINKEDIN_URL, INSTAGRAM_URL } from '@/app/utils/siteConfig';
 
 interface GitHubInfo {
   stars: number;
@@ -11,52 +13,45 @@ interface GitHubInfo {
 }
 
 export default function Footer() {
-  const [githubInfo, setGitHubInfo] = useState<GitHubInfo>({ stars: 0, forks: 0 });
+  const [githubInfo, setGitHubInfo] = useState<GitHubInfo | null>(null);
 
   useEffect(() => {
     fetch('https://api.github.com/repos/prynskaf/personal-website')
       .then(response => response.json())
       .then(json => {
         setGitHubInfo({
-          stars: json.stargazers_count,
-          forks: json.forks_count,
+          stars: json.stargazers_count ?? 0,
+          forks: json.forks_count ?? 0,
         });
       })
       .catch(console.error);
   }, []);
 
+  const socialLinks = [
+    { href: GITHUB_URL, icon: FiGithub, label: 'GitHub' },
+    { href: INSTAGRAM_URL, icon: FiInstagram, label: 'Instagram' },
+    { href: LINKEDIN_URL, icon: FiLinkedin, label: 'LinkedIn' },
+  ];
+
   return (
     <footer className={styles.footer}>
-      <div className={styles.footer__social_left}>
-        <ul>
-          <li><Link href="https://github.com/prynskaf" target="_blank" rel="noopener noreferrer"><FiGithub /></Link></li>
-          <li><Link href="https://www.instagram.com/trendsandtarget/"><FiInstagram /></Link></li>
-          <li><Link href="https://x.com/"   target="_blank" rel="noopener noreferrer"><FiTwitter /></Link></li>
-          <li><Link href="https://www.linkedin.com/in/prince-kyei/" target="_blank" rel="noopener noreferrer"><FiLinkedin /></Link></li>
-          <li><Link href="https://codepen.io/" target="_blank" rel="noopener noreferrer"><FiCodepen /></Link></li>
-          <li className={styles.footer__line}></li>
-        </ul>
-      </div>
-
-      <div className={styles.footer__social_right}>
-        <Link href="mailto:prynskaf.12@gmail.com">prynskaf.12@gmail.com</Link>
-        <div className={styles.footer__line}></div>
-      </div>
-
       <div className={styles.footer__content}>
         <div className={styles.footer__mobile_social}>
-          <Link href="https://github.com/prynskaf" target="_blank" rel="noopener noreferrer"><FiGithub /></Link>
-          <Link href="https://www.instagram.com/trendsandtarget/"><FiInstagram /></Link>
-          <Link href="https://x.com/"  target="_blank" rel="noopener noreferrer"><FiTwitter /></Link>
-          <Link href="https://www.linkedin.com/in/prince-kyei/" target="_blank" rel="noopener noreferrer"><FiLinkedin /></Link>
-          <Link href="https://codepen.io/"  target="_blank" rel="noopener noreferrer"><FiCodepen /></Link>
+          {socialLinks.map(({ href, icon: Icon, label }) => (
+            <Link key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+              <Icon />
+            </Link>
+          ))}
         </div>
+        <p className={styles.footer__email}>
+          <Link href={`mailto:${SITE_EMAIL}`}>{SITE_EMAIL}</Link>
+        </p>
         <div className={styles.footer__credits}>
           <Link href="https://github.com/prynskaf/personal-website" target="_blank" rel="noopener noreferrer">
             <span>Designed & Built by Prince Kyei</span>
             <div className={styles.footer__stats}>
-              <span><GoStar /> {githubInfo.stars}</span>
-              <span><GoRepoForked /> {githubInfo.forks}</span>
+              <span><GoStar /> {githubInfo ? githubInfo.stars : '—'}</span>
+              <span><GoRepoForked /> {githubInfo ? githubInfo.forks : '—'}</span>
             </div>
           </Link>
         </div>

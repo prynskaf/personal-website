@@ -12,7 +12,7 @@ export const workData: WorkExperience[] = [
     id: 5,
     company: "CV Wiser",
     role: "FOUNDER & DEVELOPER",
-    period: "2025 - Present",
+    period: "2026 - Present",
     link: "https://cvwiser.com/",
     achievements: [
       "Founded and launched CV Wiser — a SaaS platform that helps job seekers generate AI-tailored CVs and cover letters, beat ATS filters, and track applications from a single dashboard.",
